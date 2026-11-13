@@ -1,0 +1,112 @@
+yml_content = """# ==============================================================================
+# GitHub Pages / Jekyll Portfolio Configuration (_config.yml)
+# ==============================================================================
+
+# Site Settings
+title: "Jose Alejandro Canas Reyes | Process Engineer & Fulbright Scholar"
+email: "jac50@rice.edu"
+description: >-
+  Process Engineer & Fulbright Scholar specializing in Business Process Management (BPM),
+  Continuous Improvement, Lean Six Sigma, and Digital Optimization across 22+ countries.
+baseurl: "" # Leave empty for username.github.io; or set to "/repo-name" for project pages
+url: "https://jac50.github.io" # Update with your actual GitHub Pages URL
+
+# Profile & Author Information
+author:
+  name: "Jose Alejandro Canas Reyes"
+  role: "Process Engineer | Fulbright Scholar"
+  location: "Houston, TX"
+  email: "jac50@rice.edu"
+  phone: "(346) 475-3506"
+  linkedin: "https://www.linkedin.com" # Update with your actual LinkedIn profile URL
+  github: "https://github.com"         # Update with your actual GitHub profile URL
+
+# Theme & Build Settings (GitHub Pages Compatible)
+theme: minima # Common GitHub Pages themes: minima, jekyll-theme-minimal, jekyll-theme-cayman, jekyll-theme-slate
+markdown: kramdown
+highlighter: rouge
+
+# Plugins (Supported natively by GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation Links
+header_pages:
+  - about.md
+  - experience.md
+  - projects.md
+
+# ==============================================================================
+# Structured Portfolio Data (Accessible via {{ site.education }}, {{ site.experience }}, etc.)
+# ==============================================================================
+
+education:
+  - degree: "Master's Degree in Engineering Management and Leadership"
+    distinction: "Fulbright Scholar"
+    institution: "Rice University"
+    location: "Houston, TX"
+    graduation: "Expected 2028"
+  - degree: "Bachelor's Degree in Industrial Engineering"
+    institution: "Universidad Don Bosco"
+    location: "San Salvador, El Salvador"
+    graduation: "2022"
+
+experience:
+  - role: "Mapping and Processes Improvement Corporate Analyst"
+    company: "Unicomer Group"
+    location: "San Salvador, El Salvador"
+    period: "Oct 2023 - Apr 2026"
+    summary: "Regional retail leader across Central America and the Caribbean."
+    highlights:
+      - "Partnered with functional teams on technology implementation and process management across 22 countries in Latin America and the Caribbean."
+      - "Led the documentation and standardization of 14 End-to-End (E2E) processes within the Strategy-to-Commercial Plan cycle."
+      - "Advised multidisciplinary teams on BPM adoption and continuous improvement using Bizagi, Power BI, and SharePoint."
+
+  - role: "Mapping and Process Improvement Regional Analyst"
+    company: "HUGO Technologies"
+    location: "San Salvador, El Salvador"
+    period: "Jan 2022 - Jan 2023"
+    summary: "Salvadorean food delivery Fintech acquired by Delivery Hero."
+    highlights:
+      - "Developed and implemented corporate-level continuous improvement initiatives using Lean Six Sigma methodology."
+      - "Designed and implemented Key Performance Indicators (KPIs) to measure operational effectiveness across critical business areas."
+      - "Advised and coached cross-functional teams on adopting a regional continuous improvement culture."
+      - "Analyzed and diagnosed improvement opportunities within high-impact business processes."
+
+leadership_and_volunteering:
+  - role: "Vice-President"
+    organization: "Salesian Industrial Engineering Student Association"
+    institution: "Universidad Don Bosco"
+    year: "2021"
+  - role: "Vice-President"
+    organization: "Salesian Scholars Student Association"
+    institution: "Universidad Don Bosco"
+    year: "2020"
+
+skills:
+  methodologies:
+    - "Business Process Management (BPM)"
+    - "Lean Six Sigma"
+    - "End-to-End (E2E) Process Standardization"
+    - "Continuous Improvement"
+    - "KPI Design & Operational Analytics"
+  tools:
+    - "Bizagi"
+    - "Power BI"
+    - "SharePoint"
+    - "Git & GitHub"
+
+# Exclude from Jekyll build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+"""
+
+with open("_config.yml", "w", encoding="utf-8") as f:
+    f.write(yml_content)
+
+print("Generated _config.yml successfully.")
